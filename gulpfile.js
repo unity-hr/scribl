@@ -1,9 +1,12 @@
 /* jshint node:true */
+/* global exec */
 'use strict';
 // generated on 2014-12-04 using generator-gulp-webapp 0.2.0
 var gulp = require('gulp');
 var chalk = require('chalk');
 var $ = require('gulp-load-plugins')();
+
+require('shelljs/global');
 
 gulp.task('views', function() {
   $.nunjucksRender.nunjucks.configure(['app', 'app/layouts', 'app/includes']);
@@ -132,4 +135,8 @@ gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () 
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
+});
+
+gulp.task('deploy', function () {
+  exec('s3_website push');
 });

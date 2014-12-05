@@ -32,6 +32,7 @@
     "opn": "^1.0.0",
     "serve-index": "^1.1.4",
     "serve-static": "^1.4.0",
+    "shelljs": "^0.3.0",
     "wiredep": "^2.0.0"
   }
 }
