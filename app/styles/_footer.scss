@@ -4,12 +4,16 @@
   color: #FFF;
   text-align: center;
 
-  .container:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 14vmin;
-    padding-bottom: 8vmin;
+  .container {
+    max-width: none;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 14vmin;
+      padding-bottom: 8vmin;
+    }
   }
 
   h2 {
