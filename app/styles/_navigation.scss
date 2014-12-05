@@ -27,19 +27,24 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
 
-  a:focus {
-    position: relative;
+    .active a {
+      position: relative;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0.65em;
-      left: 0.5em;
-      right: 0.5em;
-      border-bottom: 0.35em solid #000;
+      &::after {
+        content: url("../images/underline1-sm.svg");
+        display: inline-block;
+        position: absolute;
+        bottom: 0.2em;
+        left: 0.35em;
+        right: 0.35em;
+        width: calc(100% - 0.5em);
+        overflow: hidden;
+
+        @include query(48em) {
+          content: url("../images/underline1.svg");
+        }
+      }
     }
   }
 }

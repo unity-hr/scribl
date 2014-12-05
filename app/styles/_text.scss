@@ -4,4 +4,24 @@
       color: $color;
     }
   }
+
+  &-underline {
+    position: relative;
+
+    &::after {
+      content: url("../images/underline2-sm.svg");
+      display: inline-block;
+      position: absolute;
+      bottom: -2vmin;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      /* transform: translateX(-40%); */
+
+      @include query(48em) {
+        content: url("../images/underline2.svg");
+      }
+    }
+  }
 }

@@ -5,6 +5,7 @@
 
   p {
     margin-bottom: 2em;
+    
     @include query(48em) {
       margin-bottom: 0;
     }
@@ -35,6 +36,6 @@
   }
 
   + * {
-    padding-top: 16vmin;
+    padding-top: 20vmin;
   }
 }

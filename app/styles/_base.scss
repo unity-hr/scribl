@@ -39,7 +39,11 @@ h2 {
 }
 
 p {
-  font-size: 5vmin;
+  font-size: 7vmin;
+
+  @include query(30em) {
+
+  }
 
   @include query(48em) {
     font-size: 4vmin;

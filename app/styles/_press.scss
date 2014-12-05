@@ -1,6 +1,23 @@
 .press {
   background-color: #F6F6F6;
 
+  a {
+    $color: #007EE5;
+
+    &:hover,
+    &:focus {
+      color: $color;
+
+      &::after {
+        content: url("../images/underline2-sm-blue.svg");
+
+        @include query(48em) {
+          content: url("../images/underline2-blue.svg");
+        }
+      }
+    }
+  }
+
   .container {
     @include query(48em) {
       display: flex;
