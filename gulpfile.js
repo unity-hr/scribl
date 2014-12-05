@@ -2,31 +2,40 @@
 'use strict';
 // generated on 2014-12-04 using generator-gulp-webapp 0.2.0
 var gulp = require('gulp');
+var chalk = require('chalk');
 var $ = require('gulp-load-plugins')();
+
+gulp.task('views', function() {
+  $.nunjucksRender.nunjucks.configure(['app', 'app/layouts', 'app/includes']);
+
+  return gulp.src('app/*.html')
+    .pipe($.nunjucksRender())
+    .pipe(gulp.dest('.tmp'));
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
-    .pipe($.plumber())
     .pipe($.rubySass({
       style: 'expanded',
       precision: 10,
       loadPath: ['bower_components']
     }))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .on('error', function(err) { console.log(chalk.red(err.message)); })
+    .pipe($.postcss([require('autoprefixer-core')()]))
     .pipe(gulp.dest('.tmp/styles'));
 });
 
 gulp.task('jshint', function () {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('html', ['styles'], function () {
+gulp.task('html', ['views', 'styles'], function () {
   var assets = $.useref.assets({searchPath: ['.tmp', 'app', 'bower_components']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('.tmp/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.csso()))
@@ -64,7 +73,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('connect', ['styles'], function () {
+gulp.task('connect', ['views', 'styles'], function () {
   var serveStatic = require('serve-static');
   var serveIndex = require('serve-index');
   var app = require('connect')()
@@ -91,13 +100,10 @@ gulp.task('serve', ['connect', 'watch'], function () {
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
 
-  gulp.src('app/styles/*.scss')
-    .pipe(wiredep({
-      ignorePath: /(\.\.\/)+bower_components\//
-    }))
-    .pipe(gulp.dest('app/styles'));
-
-  gulp.src('app/*.html')
+  gulp.src([
+    'app/layouts/*.html',
+    'app/styles/*.scss'
+  ], { base: 'app' })
     .pipe(wiredep({
       ignorePath: /(\.\.\/)+bower_components\//
     }))
@@ -109,12 +115,13 @@ gulp.task('watch', ['connect'], function () {
 
   // watch for changes
   gulp.watch([
-    'app/*.html',
+    '.tmp/*.html',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
+  gulp.watch('app/**/*.html', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
 });

@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Scribl is a messaging app that allows you to communicate with your Facebook friends simply by drawing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    {% if page.title %}
+      <title>{{ page.title }} · Scribl</title>
+    {% else %}
+      <title>Scribl</title>
+    {% endif %}
+
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/69c96db7-21fb-45c5-8166-44c529209056.js"></script>
+
+    <!-- build:css styles/main.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="normalize-css/normalize.css" />
+    <!-- endbower -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {% include "navigation.html" %}
+
+    <main class="main" role="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {% include "footer.html" %}
+
+    {% include "analytics.html" %}
+
+    <!-- build:js scripts/main.js -->
+    <!-- bower:js -->
+    <script src="smooth-scroll.js/dist/js/smooth-scroll.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script>
+      smoothScroll.init({offset: 76}); // navigation height
+    </script>
+  </body>
+</html>

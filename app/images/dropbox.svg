@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="212px" height="197px" viewBox="0 0 212 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2 (9961) - http://www.bohemiancoding.com/sketch -->
+    <title>dropbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-193.000000, -1761.000000)">
+            <g id="dropbox" sketch:type="MSLayerGroup" transform="translate(193.000000, 1761.000000)">
+                <g id="Imported-Layers" fill="#007EE5" sketch:type="MSShapeGroup">
+                    <path d="M62.7167925,0.315081633 L0.755716981,40.8020408 L43.6001321,75.1368571 L106.074,36.5288776 L62.7167925,0.315081633" id="Fill-1"></path>
+                    <path d="M0.755716981,109.473694 L62.7167925,149.960653 L106.074,113.742816 L43.6001321,75.1368571 L0.755716981,109.473694" id="Fill-2"></path>
+                    <path d="M106.074,113.742816 L149.433226,149.960653 L211.394302,109.473694 L168.549887,75.1368571 L106.074,113.742816" id="Fill-3"></path>
+                    <path d="M211.394302,40.8020408 L149.433226,0.315081633 L106.074,36.5288776 L168.549887,75.1368571 L211.394302,40.8020408" id="Fill-4"></path>
+                    <path d="M106.201189,121.535531 L62.7167925,157.646286 L44.1109057,145.487469 L44.1109057,159.117143 L106.201189,196.381551 L168.293491,159.117143 L168.293491,145.487469 L149.685585,157.646286 L106.201189,121.535531" id="Fill-5"></path>
+                </g>
+                <path d="M106.064453,82.84375 C106.064453,82.84375 106.435547,62.5800781 106.435547,52.2089844 C106.435547,41.8378906 109.027344,17 109.027344,17" id="Path-102" stroke="#EEEEEE" stroke-width="18" sketch:type="MSShapeGroup"></path>
+                <path d="M84,62.5507812 C88.0950109,69.5111658 97.1932372,78.3017279 100.499118,82.0309735 C103.804999,85.7602191 105.658334,87.5507812 105.658334,87.5507812 L130,65.2232252" id="Path-100" stroke="#000000" stroke-width="9" sketch:type="MSShapeGroup"></path>
+                <path d="M106.064453,82.84375 C106.064453,82.84375 106.435547,62.5800781 106.435547,52.2089844 C106.435547,41.8378906 109.027344,4 109.027344,4" id="Path-101" stroke="#000000" stroke-width="9" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

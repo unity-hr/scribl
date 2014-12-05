@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  font-size: 0.58em;
+
+  &-block {
+    display: block;
+  }
+
+  @each $name, $color in $colors {
+    &-#{$name} {
+      background-color: $color;
+
+      &:hover,
+      &:focus {
+        background-color: tint($color, 10%);
+      }
+    }
+  }
+}

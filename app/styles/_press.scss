@@ -1,0 +1,17 @@
+.press {
+  background-color: #F6F6F6;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-image {
+    flex: 2;
+    text-align: center;
+  }
+
+  &-text {
+    flex: 3;
+  }
+}

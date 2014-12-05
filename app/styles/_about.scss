@@ -1,0 +1,22 @@
+.about {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+
+  .container {
+    display: flex;
+  }
+
+  &-text {
+    flex: 5;
+  }
+
+  &-image {
+    flex: 4;
+    margin-bottom: -8vmax;
+  }
+
+  .img-responsive {
+    margin-left: auto;
+  }
+}

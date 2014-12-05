@@ -1,0 +1,5 @@
+.container {
+  @include center(45em);
+  padding-left: 1em;
+  padding-right: 1em;
+}

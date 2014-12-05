@@ -1,0 +1,11 @@
+@function z($element) {
+  @return index($elements, $element);
+}
+
+@function tint($color, $amount) {
+  @return mix(#FFF, $color, $amount);
+}
+
+@function shade($color, $amount) {
+  @return mix(#000, $color, $amount);
+}

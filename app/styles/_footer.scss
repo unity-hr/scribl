@@ -1,0 +1,19 @@
+.footer {
+  padding-bottom: 1em;
+  background-color: #000;
+  color: #FFF;
+  text-align: center;
+
+  .container:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14vmin;
+    padding-bottom: 8vmin;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+  }
+}

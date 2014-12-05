@@ -1,0 +1,19 @@
+{% set links = [
+  { title: "Download", url: "#download" },
+  { title: "About", url: "#about" },
+  { title: "Press", url: "#press" }
+] %}
+
+<nav class="navigation" role="navigation">
+  <div class="container">
+    <a href="/" class="navigation-logo">Scribl</a>
+
+    <ol class="navigation-list">
+      {% for link in links %}
+        <li class="navigation-item active">
+          <a data-scroll href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>

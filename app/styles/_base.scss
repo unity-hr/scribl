@@ -1,0 +1,44 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+.main {
+  position: relative;
+  z-index: z(main);
+}
+
+h2 {
+  font-size: inherit;
+}
+
+p {
+  font-size: 6vmin;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+small {
+  font-size: 0.5em;
+}
+
+section {
+  position: relative;
+  padding-top: 18vmin;
+  padding-bottom: 18vmin;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

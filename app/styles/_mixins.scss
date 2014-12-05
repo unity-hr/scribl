@@ -1,0 +1,14 @@
+@mixin query($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin center($width: false) {
+  @if $width != false {
+    max-width: $width;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+}

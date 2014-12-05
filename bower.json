@@ -2,7 +2,13 @@
   "name": "scribl",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "normalize-css": "~3.0.2",
+    "smooth-scroll.js": "*"
+  },
+  "overrides": {
+    "smooth-scroll.js": {
+      "main": "dist/js/smooth-scroll.js"
+    }
   }
 }
