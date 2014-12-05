@@ -3,8 +3,17 @@
   z-index: 1;
   padding-bottom: 0;
 
+  p {
+    margin-bottom: 2em;
+    @include query(48em) {
+      margin-bottom: 0;
+    }
+  }
+
   .container {
-    display: flex;
+    @include query(48em) {
+      display: flex;
+    }
   }
 
   &-text {
@@ -13,10 +22,19 @@
 
   &-image {
     flex: 4;
-    margin-bottom: -8vmax;
+    margin-bottom: -13vmin;
   }
 
   .img-responsive {
-    margin-left: auto;
+    @include center;
+    max-width: 75vmin;
+
+    @include query(48em) {
+      margin-right: 0;
+    }
+  }
+
+  + * {
+    padding-top: 16vmin;
   }
 }

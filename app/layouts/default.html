@@ -72,7 +72,8 @@
     <!-- endbuild -->
 
     <script>
-      smoothScroll.init({offset: 76}); // navigation height
+      var navigation = document.querySelector('.navigation');
+      smoothScroll.init({offset: navigation.offsetHeight});
     </script>
   </body>
 </html>

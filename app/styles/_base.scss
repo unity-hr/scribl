@@ -9,17 +9,45 @@ html {
   font-size: $font-size-base;
 }
 
+body {
+  text-align: center;
+
+  @include query(48em) {
+    text-align: left;
+  }
+}
+
 .main {
   position: relative;
   z-index: z(main);
 }
 
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, dl,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 h2 {
+  margin-bottom: 1em;
   font-size: inherit;
+
+  @include query(48em) {
+    margin-bottom: 2em;
+  }
 }
 
 p {
-  font-size: 6vmin;
+  font-size: 5vmin;
+
+  @include query(48em) {
+    font-size: 4vmin;
+  }
+
+  @include query(64em) {
+    font-size: 6vmin;
+  }
 }
 
 a {
@@ -33,8 +61,13 @@ small {
 
 section {
   position: relative;
-  padding-top: 18vmin;
-  padding-bottom: 18vmin;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
+
+  @include query(48em) {
+    padding-top: 18vmin;
+    padding-bottom: 18vmin;
+  }
 }
 
 .img-responsive {

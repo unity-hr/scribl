@@ -9,14 +9,17 @@
   text-align: center;
 
   img {
+    @include center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   &-logo {
-    max-width: 50vmin;
-    margin-bottom: 10vmin;
+    max-width: 40vmin;
+    margin-bottom: 6vmin;
+
+    @include query(48em) {
+      margin-bottom: 10vmin;
+    }
   }
 
   &-inner {

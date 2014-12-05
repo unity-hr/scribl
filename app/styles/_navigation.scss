@@ -5,6 +5,11 @@
   left: 0;
   right: 0;
   background-color: rgba(#FFEA00, 0.8);
+  font-size: 0.65rem;
+
+  @include query(48em) {
+    font-size: 1rem;
+  }
 
   .container {
     display: flex;

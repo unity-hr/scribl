@@ -2,13 +2,20 @@
   background-color: #F6F6F6;
 
   .container {
-    display: flex;
-    align-items: center;
+    @include query(48em) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .img-responsive {
+    @include center;
+    max-width: 50vmin;
   }
 
   &-image {
     flex: 2;
-    text-align: center;
+    margin-bottom: 1em;
   }
 
   &-text {
