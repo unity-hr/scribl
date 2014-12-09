@@ -1,0 +1,18 @@
+&-privacy {
+  .navigation-list .active a::after {
+    content: url("../images/underline3-sm.svg");
+
+    @include query(48em) {
+      content: url("../images/underline3.svg");
+    }
+  }
+
+  section {
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;
+  }
+
+  .download {
+    height: auto;
+  }
+}

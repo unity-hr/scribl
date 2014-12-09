@@ -7,15 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     active = links.querySelector('a[href="' + hash + '"]');
     active.parentNode.classList.add('active');
   } else {
-    links.children[0].classList.add('active');
+    if (document.querySelector('.page-home')) {
+      links.children[0].classList.add('active');
+    }
   }
 
   links.addEventListener('click', function (event) {
     var target = event.target;
     var parent = target.parentNode;
+    var active = links.querySelector('.active');
 
     if (target && target.nodeName === 'A') {
-      links.querySelector('.active').classList.remove('active');
+      if (active) {
+        active.classList.remove('active');
+      }
+
       parent.classList.add('active');
     }
   });

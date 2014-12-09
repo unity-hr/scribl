@@ -1,0 +1,44 @@
+{% extends "default.html" %}
+
+{% set page = {
+  title: "Privacy Policy",
+  modifier: "privacy",
+  navigation: [
+    { title: "Privacy Policy", url: "#privacypolicy" }
+  ]
+} %}
+
+{% block content %}
+
+<section class="download" id="download">
+  <div class="jumbotron-inner">
+    <img class="download-logo" src="images/logo-lg.svg" alt="logo">
+  </div>
+</section>
+
+<section class="privacy container" id="privacypolicy">
+  <h2>Scribl Privacy Policy</h2>
+  <p class="date">December 09, 2014.</p>
+  <p>The following information is to help users (you) understand how Scribl collects, uses, and safeguards the information You provide to us while accessing and using the Scribl iOS app.</p>
+
+  <h2 class="text-facebook">Facebook</h2>
+  <p>Scribl is a messenger app that is not certified or endorsed by Facebook. Scribl uses the Facebook API in order to connect you with your friends. Please read Facebook’s privacy policy for more details.</p>
+
+  <h2>Information we collect</h2>
+  <p>We store your Device token to be able to send push notifications. We also store your Name and Facebook ID so You're able to send and receive messages.</p>
+  <p>We DO NOT store your mail address and friends list.</p>
+  <p>We DO NOT provide access to collected information to any 3rd party.</p>
+  <p>We DO NOT sell or distribute collected information.  Sole purpose of collecting information is to provide communication between users.</p>
+
+  <h2>Messages</h2>
+  <p>Messages are stored indefinitely on our servers. However, we will add ability for users to permanently delete messages in one of the future updates. </p>
+  <p>We DO NOT read or use your messages in any way other than making communication between you and your friends possible.</p>
+
+  <h2>Liability</h2>
+  <p>We are not responsible for any messages users create and distribute to other users. Those messages do not reflect the Scribl app team ideas or attitudes.</p>
+
+  <h2>Transparency</h2>
+  <p>We are open to your suggestions and will disclose any matter that won't harm any of the users or any 3rd party being used in order to provide the service of communication. For any suggestions and questions please contact us at support@scriblapp.com</p>
+</section>
+
+{% endblock %}

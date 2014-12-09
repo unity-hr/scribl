@@ -1,7 +1,13 @@
 {% extends "default.html" %}
 
 {% set page = {
-  title: null
+  title: null,
+  modifier: "home",
+  navigation: [
+    { title: "Download", url: "#download" },
+    { title: "About", url: "#about" },
+    { title: "Press", url: "#press" }
+  ]
 } %}
 
 {% block content %}
